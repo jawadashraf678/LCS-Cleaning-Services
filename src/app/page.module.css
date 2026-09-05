@@ -112,7 +112,7 @@
 /* Hero Section */
 .hero {
   background-color: var(--bg-hero);
-  padding: 6rem 0 4rem;
+  padding: 10rem 0 8rem;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -260,6 +260,8 @@
   object-position: top;
   display: block;
   height: auto;
+  transform: scale(1.20);
+  transform-origin: bottom center;
 }
 
 .floatingIcon {
@@ -984,6 +986,8 @@ textarea.formControl {
     border-bottom-right-radius: 125px;
     margin-top: -20px;
     max-width: 100%;
+    transform: scale(1.20);
+    transform-origin: bottom center;
   }
   .floatingIcon {
     width: 50px;
@@ -1053,6 +1057,8 @@ textarea.formControl {
   .ctaGrid {
     grid-template-columns: 1fr;
     gap: 3rem;
+    display: flex;
+    flex-direction: column-reverse;
   }
   
   .contactFormCard {
