@@ -43,7 +43,7 @@ export default function Home() {
   ];
 
   return (
-    <main>
+    <main style={{ overflowX: 'hidden', width: '100%' }}>
       {/* Top Bar */}
       <div className={styles.topBar}>
         <div className={`container ${styles.topBarContainer}`}>
@@ -70,7 +70,7 @@ export default function Home() {
         <div className={`container ${styles.navContainer}`}>
           <div className={styles.brand}>
             <Image src="/logo.png" alt="LCS Cleaning" width={50} height={50} />
-            <span>LCS<br/>Cleaning</span>
+            <span>LCS Cleaning</span>
           </div>
           <ul className={styles.navLinks}>
             <li><a href="#services">Services</a></li>
@@ -79,9 +79,6 @@ export default function Home() {
             <li><a href="#faq">FAQ</a></li>
           </ul>
           <div className={styles.navActions}>
-            <div className={styles.searchIcon}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </div>
             <a href="#contact" className={`btn btn-primary ${styles.desktopCta}`}>Get a Quote</a>
             
             {/* Hamburger Icon */}

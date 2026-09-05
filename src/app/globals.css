@@ -24,7 +24,6 @@ html, body {
   color: var(--text-primary);
   background-color: var(--bg-color);
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 html {
@@ -114,10 +113,8 @@ a {
   }
   .container {
     padding: 0 1rem;
-    overflow-x: hidden;
   }
   body, html {
-    overflow-x: hidden;
     width: 100%;
   }
 }

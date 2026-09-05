@@ -7,6 +7,9 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 export const metadata = {
   title: "LCS Cleaning Services Inc. | Professional Cleaning",
   description: "Reliable Commercial & Professional Cleaning Services for healthier spaces and better results.",
+  icons: {
+    icon: '/LOGO.png',
+  },
 };
 
 export default function RootLayout({ children }) {
