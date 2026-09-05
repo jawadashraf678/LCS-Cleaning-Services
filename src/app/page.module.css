@@ -259,6 +259,7 @@
   object-fit: cover;
   object-position: top;
   display: block;
+  height: auto;
 }
 
 .floatingIcon {
@@ -971,6 +972,7 @@ textarea.formControl {
   .heroImageWrapper {
     max-width: 100%;
     transform: scale(0.9);
+    margin-top: 2rem;
   }
   .heroCircleBg {
     width: 250px;
