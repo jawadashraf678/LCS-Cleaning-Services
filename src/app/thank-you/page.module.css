@@ -1,0 +1,86 @@
+.thankYouWrapper {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.topBar {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 0;
+  font-size: 0.85rem;
+}
+
+.topBarContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.topBarInfo {
+  display: flex;
+  gap: 2rem;
+}
+
+.contentContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(43, 171, 182, 0.1) 0%, rgba(10, 42, 86, 0.05) 100%);
+}
+
+.successCard {
+  background: white;
+  border-radius: 24px;
+  padding: 4rem 3rem;
+  max-width: 550px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconWrapper {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(43, 171, 182, 0.1);
+  color: var(--secondary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .topBarInfo {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .successCard {
+    padding: 3rem 2rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+}

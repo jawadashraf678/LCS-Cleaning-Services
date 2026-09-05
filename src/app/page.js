@@ -3,19 +3,21 @@
 import styles from './page.module.css';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export default function Home() {
   const [activeFaq, setActiveFaq] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     AOS.init({
-      duration: 800,
-      once: false,
-      mirror: true, // Animates out while scrolling past them
-      offset: 100,
+      duration: 500,
+      once: true,
+      mirror: false,
+      offset: 50,
     });
   }, []);
 
@@ -58,9 +60,15 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.topBarSocials}>
-            <a href="#" className={styles.socialIcon}>fb</a>
-            <a href="#" className={styles.socialIcon}>tw</a>
-            <a href="#" className={styles.socialIcon}>in</a>
+            <a href="#" className={styles.socialIcon}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" className={styles.socialIcon}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="#" className={styles.socialIcon}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
           </div>
         </div>
       </div>
@@ -136,15 +144,15 @@ export default function Home() {
             </p>
             
             <div className={styles.heroButtons}>
-              <a href="#quote" className="btn btn-primary">
+              <a href="#contact" className="btn btn-primary">
                 Get a Free Quote
               </a>
-              <button className={styles.watchVideoBtn}>
+              <a href="#contact" className={styles.watchVideoBtn} style={{ textDecoration: 'none' }}>
                 <div className={styles.playIconWrapper}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"></path></svg>
                 </div>
                 Contact Our Team
-              </button>
+              </a>
             </div>
             
             <div className={styles.statsRow} data-aos="fade-up" data-aos-delay="200">
@@ -162,10 +170,10 @@ export default function Home() {
           <div className={styles.heroImageWrapper} data-aos="fade-left">
             <div className={styles.heroCircleBg}></div>
             <Image 
-              src="/hero_cleaner.jpg" 
+              src="/PIC.png" 
               alt="Professional Cleaner" 
-              width={450} 
-              height={600} 
+              width={550} 
+              height={750} 
               className={styles.heroImage}
               priority
             />
@@ -211,7 +219,7 @@ export default function Home() {
                 </div>
               </div>
               <h3 className={styles.serviceTitle}>Commercial Cleaning</h3>
-              <p className={styles.serviceDesc}>Keep your commercial property looking professional, clean, and welcoming with reliable cleaning services designed around your facility's needs.</p>
+              <p className={styles.serviceDesc}>Keep your property looking professional and welcoming with our reliable commercial cleaning services.</p>
               <ul className={styles.serviceList}>
                 <li>General facility cleaning</li>
                 <li>Common areas & Workspaces</li>
@@ -227,7 +235,7 @@ export default function Home() {
                 </div>
               </div>
               <h3 className={styles.serviceTitle}>Office Cleaning</h3>
-              <p className={styles.serviceDesc}>LCS Cleaning Services Inc. provides office cleaning solutions that help keep workspaces organized, fresh, and presentable.</p>
+              <p className={styles.serviceDesc}>Office cleaning solutions that keep your workspaces organized, fresh, and presentable.</p>
               <ul className={styles.serviceList}>
                 <li>Everyday surfaces</li>
                 <li>Shared areas</li>
@@ -243,7 +251,7 @@ export default function Home() {
                 </div>
               </div>
               <h3 className={styles.serviceTitle}>Facility Cleaning</h3>
-              <p className={styles.serviceDesc}>Our facility cleaning services are designed to help businesses maintain their spaces through consistent and dependable cleaning routines.</p>
+              <p className={styles.serviceDesc}>Consistent and dependable cleaning routines to help perfectly maintain your facility spaces.</p>
               <ul className={styles.serviceList}>
                 <li>Flexible scheduling</li>
                 <li>Customized routines</li>
@@ -259,7 +267,7 @@ export default function Home() {
                 </div>
               </div>
               <h3 className={styles.serviceTitle}>Customized Cleaning</h3>
-              <p className={styles.serviceDesc}>Focus on the areas and requirements most important to your business. Give additional attention to areas that need a deeper level of care.</p>
+              <p className={styles.serviceDesc}>Tailored cleaning focusing on the specific areas and requirements most important to your business.</p>
               <ul className={styles.serviceList}>
                 <li>Detailed care</li>
                 <li>Specific priorities</li>
@@ -401,13 +409,47 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className={styles.ctaSection} id="contact" data-aos="zoom-in">
+      {/* CTA / Contact Section */}
+      <section className={styles.ctaSection} id="contact">
         <div className="container">
-          <h2 className={styles.ctaTitle}>Ready for a Cleaner Workspace?</h2>
-          <p className={styles.ctaDesc}>Get in touch with LCS Cleaning Services Inc. today to discuss your cleaning needs.</p>
-          <div className={styles.ctaButtons}>
-            <button className="btn btn-primary">Get a Free Quote</button>
+          <h2 className={styles.ctaTitle}>Get a Free Quote</h2>
+          <p className={styles.ctaDesc}>Fill out the form below to discuss your cleaning needs. Our team will get back to you with a customized plan.</p>
+          
+          <div className={styles.contactFormCard}>
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              router.push("/thank-you");
+            }}>
+              <div className={styles.formGroup}>
+                <label htmlFor="name">Full Name</label>
+                <input type="text" id="name" className={styles.formControl} placeholder="John Doe" required />
+              </div>
+              
+              <div className={styles.formGroup}>
+                <label htmlFor="phone">Phone Number</label>
+                <input type="tel" id="phone" className={styles.formControl} placeholder="(123) 456-7890" required />
+              </div>
+              
+              <div className={styles.formGroup}>
+                <label htmlFor="email">Email Address</label>
+                <input type="email" id="email" className={styles.formControl} placeholder="john@company.com" required />
+              </div>
+              
+              <div className={styles.formGroup}>
+                <label htmlFor="business">Business / Company Name</label>
+                <input type="text" id="business" className={styles.formControl} placeholder="Your Company Ltd." required />
+              </div>
+              
+              <div className={styles.formGroup}>
+                <label htmlFor="message">Service Needed</label>
+                <textarea id="message" className={styles.formControl} placeholder="Tell us about the cleaning services you require..."></textarea>
+              </div>
+              
+              <button type="submit" className={`btn btn-primary ${styles.submitBtn}`}>
+                Send Request
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
           </div>
         </div>
       </section>

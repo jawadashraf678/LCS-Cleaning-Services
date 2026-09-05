@@ -238,8 +238,8 @@
 
 .heroCircleBg {
   position: absolute;
-  width: 550px;
-  height: 550px;
+  width: 600px;
+  height: 600px;
   background-color: var(--secondary-color);
   border-radius: 50%;
   z-index: 1;
@@ -252,7 +252,7 @@
   border-bottom-right-radius: 275px;
   object-fit: cover;
   object-position: top;
-  margin-top: -50px;
+  margin-top: -80px;
 }
 
 .floatingIcon {
@@ -683,6 +683,7 @@
   color: white;
   text-align: center;
   padding: 6rem 0;
+  position: relative;
 }
 
 .ctaTitle {
@@ -695,22 +696,63 @@
   font-size: 1.25rem;
   margin-bottom: 2rem;
   opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.ctaButtons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
+/* Contact Form */
+.contactFormCard {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 600px;
+  margin: 3rem auto 0;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  text-align: left;
 }
 
-.btnCta {
-  background-color: var(--primary-color);
-  color: white;
+.formGroup {
+  margin-bottom: 1.5rem;
 }
 
-.btnCta:hover {
-  background-color: #082142;
-  color: white;
+.formGroup label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.formControl {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+  background-color: #f8fafc;
+}
+
+.formControl:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(43, 171, 182, 0.15);
+}
+
+textarea.formControl {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitBtn {
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  padding: 1.2rem;
 }
 
 /* Footer */
@@ -970,7 +1012,10 @@
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
   }
-  .section {
-    padding: 3rem 0;
+  .contactFormCard {
+    padding: 1.5rem;
+  }
+  .ctaSection {
+    padding: 4rem 0;
   }
 }
