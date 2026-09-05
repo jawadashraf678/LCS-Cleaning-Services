@@ -77,7 +77,7 @@ export default function Home() {
       <nav className={styles.navbar}>
         <div className={`container ${styles.navContainer}`}>
           <div className={styles.brand}>
-            <Image src="/logo.png" alt="LCS Cleaning" width={50} height={50} />
+            <Image src="/LOGO.png" alt="LCS Cleaning" width={50} height={50} />
             <span>LCS Cleaning</span>
           </div>
           <ul className={styles.navLinks}>
@@ -261,7 +261,7 @@ export default function Home() {
             
             <div className={styles.serviceCard} data-aos="fade-up" data-aos-delay="400">
               <div className={styles.serviceImageWrapper}>
-                <Image src="/hero_cleaner.jpg" alt="Customized Cleaning" fill sizes="(max-width: 768px) 100vw, 300px" className={styles.serviceImage} style={{objectPosition: "top"}} />
+                <Image src="/PIC.png" alt="Customized Cleaning" fill sizes="(max-width: 768px) 100vw, 300px" className={styles.serviceImage} style={{objectPosition: "top"}} />
                 <div className={styles.serviceIcon}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                 </div>
