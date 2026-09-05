@@ -21,7 +21,7 @@ export default function ThankYou() {
       <div className={styles.topBar}>
         <div className={`container ${styles.topBarContainer}`}>
           <div className={styles.topBarInfo}>
-            <span>647-470-2777</span>
+            <span>+1 647-470-2777</span>
             <span>cleaningserviceslcs3@gmail.com</span>
           </div>
         </div>
