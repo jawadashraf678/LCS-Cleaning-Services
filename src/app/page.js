@@ -136,7 +136,7 @@ export default function Home() {
             </div>
             
             <h1 className={styles.heroTitle}>
-              CLEANER, HEALTHIER WORKSPACES <br/> <span className={styles.highlightPill}>LCS CLEANING</span>
+              CLEANER, HEALTHIER <br/> WORKSPACES <br/> <span className={styles.highlightPill}>LCS CLEANING</span>
             </h1>
             
             <p className={styles.heroDesc}>
@@ -172,8 +172,8 @@ export default function Home() {
             <Image 
               src="/PIC.png" 
               alt="Professional Cleaner" 
-              width={550} 
-              height={750} 
+              width={600} 
+              height={800} 
               className={styles.heroImage}
               priority
             />
@@ -188,7 +188,7 @@ export default function Home() {
       <section className="section" id="about">
         <div className={`container ${styles.aboutGrid}`}>
           <div className={styles.aboutImage} data-aos="fade-right">
-            <Image src="/commercial.jpg" alt="LCS Cleaning Team" width={600} height={500} style={{borderRadius: '20px', objectFit: 'cover', width: '100%', height: '100%'}} />
+            <Image src="/office.jpg" alt="LCS Cleaning Team" width={600} height={500} style={{borderRadius: '20px', objectFit: 'cover', width: '100%', height: '100%'}} />
           </div>
           <div className={styles.aboutContent} data-aos="fade-left">
             <h3>More Than Just Cleaning</h3>
@@ -213,7 +213,7 @@ export default function Home() {
           <div className={styles.servicesGrid}>
             <div className={styles.serviceCard} data-aos="fade-up" data-aos-delay="100">
               <div className={styles.serviceImageWrapper}>
-                <Image src="/commercial.jpg" alt="Commercial Cleaning" fill sizes="(max-width: 768px) 100vw, 300px" className={styles.serviceImage} />
+                <Image src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=600&auto=format&fit=crop" alt="Commercial Cleaning" fill sizes="(max-width: 768px) 100vw, 300px" className={styles.serviceImage} />
                 <div className={styles.serviceIcon}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11m16-11v11M8 14v3m4-3v3m4-3v3"></path></svg>
                 </div>
@@ -229,7 +229,7 @@ export default function Home() {
             
             <div className={styles.serviceCard} data-aos="fade-up" data-aos-delay="200">
               <div className={styles.serviceImageWrapper}>
-                <Image src="/office.jpg" alt="Office Cleaning" fill sizes="(max-width: 768px) 100vw, 300px" className={styles.serviceImage} />
+                <Image src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop" alt="Office Cleaning" fill sizes="(max-width: 768px) 100vw, 300px" className={styles.serviceImage} />
                 <div className={styles.serviceIcon}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                 </div>
@@ -245,7 +245,7 @@ export default function Home() {
             
             <div className={styles.serviceCard} data-aos="fade-up" data-aos-delay="300">
               <div className={styles.serviceImageWrapper}>
-                <Image src="/commercial.jpg" alt="Facility Cleaning" fill sizes="(max-width: 768px) 100vw, 300px" className={styles.serviceImage} style={{filter: "brightness(0.9) hue-rotate(10deg)"}} />
+                <Image src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Facility Cleaning" fill sizes="(max-width: 768px) 100vw, 300px" className={styles.serviceImage} />
                 <div className={styles.serviceIcon}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
                 </div>
@@ -261,7 +261,7 @@ export default function Home() {
             
             <div className={styles.serviceCard} data-aos="fade-up" data-aos-delay="400">
               <div className={styles.serviceImageWrapper}>
-                <Image src="/PIC.png" alt="Customized Cleaning" fill sizes="(max-width: 768px) 100vw, 300px" className={styles.serviceImage} style={{objectPosition: "top"}} />
+                <Image src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=600&auto=format&fit=crop" alt="Customized Cleaning" fill sizes="(max-width: 768px) 100vw, 300px" className={styles.serviceImage} />
                 <div className={styles.serviceIcon}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                 </div>
@@ -412,44 +412,56 @@ export default function Home() {
       {/* CTA / Contact Section */}
       <section className={styles.ctaSection} id="contact">
         <div className="container">
-          <h2 className={styles.ctaTitle}>Get a Free Quote</h2>
-          <p className={styles.ctaDesc}>Fill out the form below to discuss your cleaning needs. Our team will get back to you with a customized plan.</p>
-          
-          <div className={styles.contactFormCard}>
-            <form onSubmit={(e) => {
-              e.preventDefault();
-              router.push("/thank-you");
-            }}>
-              <div className={styles.formGroup}>
-                <label htmlFor="name">Full Name</label>
-                <input type="text" id="name" className={styles.formControl} placeholder="John Doe" required />
+          <div className={styles.ctaGrid}>
+            <div className={styles.ctaRight} data-aos="fade-right">
+              <div className={styles.ctaImageWrapper}>
+                <Image src="/clean image.jpg" alt="Cleaning Services Commitment" width={600} height={400} style={{objectFit: 'cover', width: '100%', height: 'auto'}} />
               </div>
+              <h3 className={styles.ctaRightTitle}>Our Commitment to You</h3>
+              <p className={styles.ctaRightDesc}>At LCS Cleaning Services, we build lasting relationships with our clients based on trust, reliability, and unparalleled cleaning standards. A clean environment is the foundation of a productive workspace, and your satisfaction is our top priority.</p>
+            </div>
+            
+            <div className={styles.ctaContent} data-aos="fade-left" data-aos-delay="200">
+              <h2 className={styles.ctaTitle}>Get a Free Quote</h2>
+              <p className={styles.ctaDesc}>Fill out the form below to discuss your cleaning needs. Our team will get back to you with a customized plan.</p>
               
-              <div className={styles.formGroup}>
-                <label htmlFor="phone">Phone Number</label>
-                <input type="tel" id="phone" className={styles.formControl} placeholder="(123) 456-7890" required />
+              <div className={styles.contactFormCard}>
+                <form onSubmit={(e) => {
+                  e.preventDefault();
+                  router.push("/thank-you");
+                }}>
+                  <div className={styles.formGroup}>
+                    <label htmlFor="name">Full Name</label>
+                    <input type="text" id="name" className={styles.formControl} placeholder="John Doe" required />
+                  </div>
+                  
+                  <div className={styles.formGroup}>
+                    <label htmlFor="phone">Phone Number</label>
+                    <input type="tel" id="phone" className={styles.formControl} placeholder="(123) 456-7890" required />
+                  </div>
+                  
+                  <div className={styles.formGroup}>
+                    <label htmlFor="email">Email Address</label>
+                    <input type="email" id="email" className={styles.formControl} placeholder="john@company.com" required />
+                  </div>
+                  
+                  <div className={styles.formGroup}>
+                    <label htmlFor="business">Business / Company Name</label>
+                    <input type="text" id="business" className={styles.formControl} placeholder="Your Company Ltd." required />
+                  </div>
+                  
+                  <div className={styles.formGroup}>
+                    <label htmlFor="message">Service Needed</label>
+                    <textarea id="message" className={styles.formControl} placeholder="Tell us about the cleaning services you require..."></textarea>
+                  </div>
+                  
+                  <button type="submit" className={`btn btn-primary ${styles.submitBtn}`}>
+                    Send Request
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                  </button>
+                </form>
               </div>
-              
-              <div className={styles.formGroup}>
-                <label htmlFor="email">Email Address</label>
-                <input type="email" id="email" className={styles.formControl} placeholder="john@company.com" required />
-              </div>
-              
-              <div className={styles.formGroup}>
-                <label htmlFor="business">Business / Company Name</label>
-                <input type="text" id="business" className={styles.formControl} placeholder="Your Company Ltd." required />
-              </div>
-              
-              <div className={styles.formGroup}>
-                <label htmlFor="message">Service Needed</label>
-                <textarea id="message" className={styles.formControl} placeholder="Tell us about the cleaning services you require..."></textarea>
-              </div>
-              
-              <button type="submit" className={`btn btn-primary ${styles.submitBtn}`}>
-                Send Request
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-              </button>
-            </form>
+            </div>
           </div>
         </div>
       </section>
